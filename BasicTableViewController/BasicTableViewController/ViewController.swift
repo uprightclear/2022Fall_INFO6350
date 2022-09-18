@@ -27,7 +27,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     @IBOutlet weak var tblView: UITableView!
     
-    let contacts = ["Ashish", "Tom", "Peter", "Bill", "Mark", "Steve"]
+    let lists = ["Shake Shack", "Chipotle", "KFC", "Panda Express", "Tianfuchunqiu", "Dick's"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,12 +37,12 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return contacts.count
+        return lists.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        cell.textLabel?.text = contacts[indexPath.row]
+        cell.textLabel?.text = lists[indexPath.row]
         return cell
     }
 }
